@@ -14,7 +14,7 @@ public class CookieIngred
     butterC = Math.ceil(cookies / 48.0);
     flourC = Math.ceil(cookies / 48.0) * 3;
 
-    System.out.println("To make " + cookies + " cookies, it will require:");
-    System.out.println(sugarC + " cups of sugar\n" + butterC + " cups of butter\n" + flourC + " cups of flour");
+    System.out.println("To make " + int(cookies) + " cookies, it will require:");
+    System.out.println(int(sugarC) + " cups of sugar\n" + int(butterC) + " cups of butter\n" + int(flourC) + " cups of flour");
   }
 }
