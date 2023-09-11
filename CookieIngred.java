@@ -9,6 +9,12 @@ public class WordGame
     int flourC;    //cups of flour count
     int cookies;   //desired cookies
     System.out.println("Enter the desired amount of cookies:");
-    int cookies = myScan.nextline();
+    cookies = myScan.nextLine();
+    sugarC = (cookies / 48) * 2;
+    butterC = (cookies / 48);
+    flourC = (cookies / 48) * 3;
+
+    System.out.println("To make " + cookies + " cookies, it will require:");
+    System.out.println(sugarC + " cups of sugar\n" + butterC + " cups of butter\n" + flourC + " cups of flour");
   }
 }
