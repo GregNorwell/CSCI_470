@@ -1,7 +1,7 @@
 //This progrma displays Personal info
 public class PInfo
 {
-  public static void main
+  public static void main(String[] args)
   {
     System.out.println("Tommy");
     System.out.println("721 Treegrass Lane");
