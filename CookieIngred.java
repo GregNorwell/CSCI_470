@@ -1,5 +1,5 @@
 import java.util.Scanner; //Import Scanner class
-public class WordGame
+public class CookieIngred
 {
   public static void main(String[] args)
   {
@@ -9,7 +9,7 @@ public class WordGame
     int flourC;    //cups of flour count
     int cookies;   //desired cookies
     System.out.println("Enter the desired amount of cookies:");
-    cookies = myScan.nextLine();
+    cookies = myScan.nextInt();
     sugarC = (cookies / 48) * 2;
     butterC = (cookies / 48);
     flourC = (cookies / 48) * 3;
