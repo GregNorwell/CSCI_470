@@ -15,6 +15,8 @@ public class WordGame
     System.out.println("Enter Pet Name:");
     String pName = myScan.nextLine();
 
-    System.out.println(name + " lived in " + city + ". At the age of " + age + " he adopted a(n) " + aName + " named " + pName); 
+    System.out.println(name + " lived in " + city + ". At the age of " + age + " he adopted a(n) " + aName + " named " + pName);
+    System.out.println();
+    System.out.println(name + " then ate that " + aName + " named " + pName + ");
   }
 }
