@@ -10,11 +10,11 @@ public class CookieIngred
     int cookies;   //desired cookies
     System.out.println("Enter the desired amount of cookies:");
     cookies = myScan.nextInt();
-    sugarC = Math.ceil(cookies / 48) * 2;
-    butterC = Math.ceil(cookies / 48);
-    flourC = Math.ceil(cookies / 48) * 3;
+    sugarC = Math.ceil(cookies / 48.0) * 2;
+    butterC = Math.ceil(cookies / 48.0);
+    flourC = Math.ceil(cookies / 48.0) * 3;
 
-    System.out.println("To make " + cookies + " cookies, it will require:");
+    System.out.println("To make " + (int) cookies + " cookies, it will require:");
     System.out.println(sugarC + " cups of sugar\n" + butterC + " cups of butter\n" + flourC + " cups of flour");
   }
 }
