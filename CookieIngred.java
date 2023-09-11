@@ -4,10 +4,10 @@ public class CookieIngred
   public static void main(String[] args)
   {
     Scanner myScan = new Scanner(System.in);  //set up scanner named myScan
-    int sugarC;    //cups of sugar count
-    int butterC;   //cups of butter count
-    int flourC;    //cups of flour count
-    int cookies;   //desired cookies
+    double sugarC;    //cups of sugar count
+    double butterC;   //cups of butter count
+    double flourC;    //cups of flour count
+    double cookies;   //desired cookies
     System.out.println("Enter the desired amount of cookies:");
     cookies = myScan.nextInt();
     sugarC = Math.ceil(cookies / 48.0) * 2;
