@@ -1,3 +1,4 @@
+//This program draws from a selection of ASCII Art
 import java.util.Scanner; //Import Scanner class
 public class ASCIIArt
 {
@@ -11,14 +12,14 @@ public class ASCIIArt
     shapeInt = myScan.nextInt();  //recieve the shapeInt as an int
     
     switch (shapeInt){
-      case 1:
+      case 1: // Trapezoid
         System.out.println("    *******");
         System.out.println("   *       *");
         System.out.println("  *         *");
         System.out.println(" *           *");
         System.out.println("***************");
         break;
-      case 2:
+      case 2: // Heptagon
         System.out.println("       *");
         System.out.println("      * *");
         System.out.println("     *   *");
@@ -37,20 +38,20 @@ public class ASCIIArt
         System.out.println("   *       *");
         System.out.println("    *******");
         break;
-      case 3:
+      case 3: // Rectangle
         System.out.println("*****************");
         for (int i = 0; i < 3; i++)
           System.out.println("*               *");
         System.out.println("*****************");
         break;
-      case 4:
+      case 4: // Right triangle
         System.out.println("*");
         System.out.println("* *");
         System.out.println("*   *");
         System.out.println("*     *");
         System.out.println("********");
         break;
-      case 5:
+      case 5: // Square
         System.out.println("*****************");
         for (int i = 0; i < 7; i++)
           System.out.println("*               *");
