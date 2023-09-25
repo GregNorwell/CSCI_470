@@ -9,7 +9,7 @@ public class FelineBMI
     Scanner myScan = new Scanner(System.in);  //set up scanner named myScan
 
     System.out.println("Enter name of cat:");
-    catName = myScan.nextString();  //recieve the catName as a string
+    catName = myScan.next();  //recieve the catName as a string
     
     System.out.println("Enter rib circumfrence of the cat:");
     ribCircum = myScan.nextDouble();  //recive the ribCircumfrence as an double
