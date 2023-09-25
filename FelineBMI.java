@@ -18,16 +18,16 @@ public class FelineBMI
     if (fbmi >= 40){
       System.out.println("Very Obese");
     }
-    else if (fbmi < 40){
+    else if (fbmi >= 35 && fbmi < 40){
       System.out.println("Obese");
     }
-    else if (fbmi < 35){
+    else if (fbmi >= 30 && fbmi < 35){
       System.out.println("Overweight");
     }
-    else if (fbmi < 30){
+    else if (fbmi >= 15 && fbmi < 30){
       System.out.println("Normal");
     }
-    else if (fbmi < 15){
+    else if (fbmi >= 10 && fbmi < 15){
       System.out.println("Underweight");
     }
     else if (fbmi < 10){
