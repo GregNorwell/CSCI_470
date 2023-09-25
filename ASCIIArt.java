@@ -7,7 +7,7 @@ public class ASCIIArt
 
     System.out.println("1: Trapezoid  2: Heptagon\n3: Rectangle  4: Right Triangle\n5: Square");
     System.out.println("Enter number for shape:");
-    shapeInt = myScan.nextInt();  //recieve the shapeInt as an int
+    shapeInt = myScan.nextint();  //recieve the shapeInt as an int
     
     switch (shapeInt){
       case 1:
