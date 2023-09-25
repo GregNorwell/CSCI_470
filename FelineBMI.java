@@ -5,7 +5,7 @@ public class FelineBMI
   public static void main(String[] args)
   {
     double ribCircum, legLength, fbmi;
-    string catName;
+    String catName;
     Scanner myScan = new Scanner(System.in);  //set up scanner named myScan
 
     System.out.println("Enter name of cat:");
