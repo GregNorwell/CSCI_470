@@ -19,10 +19,23 @@ public class ASCIIArt
         System.out.println("***************");
         break;
       case 2:
-        System.out.println("         *");
-        System.out.println("       /  \\");
-        System.out.println("*    \\      /");
-        System.out.println("        ____");
+        System.out.println("       *");
+        System.out.println("      * *");
+        System.out.println("     *   *");
+        System.out.println("    *     *");
+        System.out.println("   *       *");
+        System.out.println("  *         *");
+        System.out.println(" *           *");
+        System.out.println("*             *");
+        System.out.println("*             *");
+        System.out.println("*             *");
+        System.out.println("*             *");
+        System.out.println("*             *");
+        System.out.println("*             *");
+        System.out.println(" *           *");
+        System.out.println("  *         *");
+        System.out.println("   *       *");
+        System.out.println("    *******");
         break;
       case 3:
         System.out.println("*****************");
