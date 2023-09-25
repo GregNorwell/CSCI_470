@@ -19,15 +19,14 @@ public class ASCIIArt
         System.out.println("***************");
         break;
       case 2:
-        System.out.println("      *");
-        System.out.println("  ***   ***");
-        System.out.println("*           *");
-        System.out.println(" ***     ***");
-        System.out.println("    *****");
+        System.out.println("         *");
+        System.out.println("       /  \\");
+        System.out.println("*    \\      /");
+        System.out.println("        ____");
         break;
       case 3:
         System.out.println("*****************");
-        for (int i = 0; i < 7; i++)
+        for (int i = 0; i < 3; i++)
           System.out.println("*               *");
         System.out.println("*****************");
         break;
@@ -40,7 +39,7 @@ public class ASCIIArt
         break;
       case 5:
         System.out.println("*****************");
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 7; i++)
           System.out.println("*               *");
         System.out.println("*****************");
         break;
