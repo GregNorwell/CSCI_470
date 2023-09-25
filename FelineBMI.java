@@ -15,32 +15,26 @@ public class FelineBMI
 
     //function to calculate Feline BMI
     fbmi = ((ribCircum / 0.7062) - legLength) / 0.9156 - legLength;
-    if (fbmi >= 40)
-    {
+    switch (fbmi){
+    case (fbmi >= 40):
       System.out.println("Very Obese");
-    }
-    else if(35 <= fbmi < 40)
-    {
+      break;
+    case (fbmi < 40):
       System.out.println("Obese");
-    }
-    else if(30 <= fbmi < 35)
-    {
+      break;
+    case (fbmi < 35):
       System.out.println("Overweight");
-    }
-    else if(15 <= fbmi < 30)
-    {
+      break;
+    case (fbmi < 30):
       System.out.println("Normal");
-    }
-    else if(10 <= fbmi < 15)
-    {
+      break;
+    case (fbmi < 15):
       System.out.println("Underweight");
-    } 
-    else if(fbmi < 10)
-    {
+      break; 
+    case (fbmi < 10):
       System.out.println("Very Underweight");
-    }
-    else
-    {
+      break;
+    default:
       System.out.println("Error out of range");
     }
   }
