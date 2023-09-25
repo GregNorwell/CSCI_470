@@ -1,0 +1,7 @@
+import java.util.Scanner; //Import Scanner class
+public class ASCIIArt
+{
+  public static void main(String[] args)
+  {
+  }
+}
