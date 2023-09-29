@@ -38,7 +38,7 @@ public class FelineBMI
       System.out.println(catName + " is overweight");
     }
     else if (fbmi >= 15 && fbmi < 30){
-      System.out.println(catName + " is normal");
+      System.out.println("fbmi: " + fbmi + " " + catName + " is normal");
     }
     else if (fbmi >= 10 && fbmi < 15){
       System.out.println(catName + " is underweight");
