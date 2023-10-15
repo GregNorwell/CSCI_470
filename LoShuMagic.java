@@ -1,6 +1,6 @@
 public class LoShuMagic {
   
-	public static boolean test(int[4][4] input) {
+	public static boolean test(int[][] input) {
     int sum = -1, rowcoltotal;
 
     //check columns (up/down)
