@@ -1,5 +1,6 @@
 import java.io.File;
 import java.util.Scanner;
+//import java.util.Arrays;
 
 public class MainClass {
 
@@ -38,10 +39,28 @@ public class MainClass {
 	
 	public static void sortByTeamName() {
 		//Fill In Code
+		for (int i=0; i < listOfWinners.length - 1; i++)
+		{
+			for (int j = i+1; j<listOfWinners.length; j++)
+			{
+				if(listOfWinners[i].team.compareTo(listOfWinners[j].team)>0)
+				{
+					String temp = listOfWinners[i].team;
+					listOfWinners[i].team = listOfWinners[j].team;
+					listOfWinners[j].team = temp;
+				}
+			}
+		}
 	}
 	
 	public static void sortByYear() {
 		//Fill In Code
+		for (int i=0; i < listOfWinners.length - 1; i++)
+		{
+			for (int j = i+1; j<listOfWinners.length; j++)
+			{
+			}
+		}
 	}
 	
 	public static void printArray() {
