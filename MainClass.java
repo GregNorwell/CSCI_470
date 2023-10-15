@@ -59,6 +59,12 @@ public class MainClass {
 		{
 			for (int j = i+1; j<listOfWinners.length; j++)
 			{
+				if(listOfWinners[i].getYear() < listOfWinners[j].getYear())
+				{
+					Winner temp = listOfWinners[i];
+					listOfWinners[i] = listOfWinners[j];
+					listOfWinners[j] = temp;
+				}
 			}
 		}
 	}
