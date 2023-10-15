@@ -15,7 +15,7 @@ public static boolean test(int[][] input) {
         return false;
     }
     sum = 0;
-    system.out.println("rows checked");
+    System.out.println("rows checked");
     //check columns (up/down)
     for(int i = 0; i < 4; i++){
       sum = 0;
@@ -25,7 +25,7 @@ public static boolean test(int[][] input) {
       if(rowcoltotal != sum)
           return false;
     }
-    system.out.println("cols checked");
+    System.out.println("cols checked");
 
     //check diagonals (corner to corner)
     if((input[0][0] + input[1][1] + input[2][2] + input[3][3]) != rowcoltotal)
