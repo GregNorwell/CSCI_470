@@ -1,6 +1,5 @@
 import java.io.File;
 import java.util.Scanner;
-//import java.util.Arrays;
 
 public class MainClass {
 
@@ -78,10 +77,19 @@ public class MainClass {
 	
 	public static void searchForWinnerByYear(int year) {
 		//Fill In Code
-	}
+		for (int i = 0; i < listOfWinners.length;i++)
+		{
+			if(listOfWinners[i].getYear() == year)
+				System.out.println(listOfWinners[m].getTeam());
+		}
 	
 	public static void searchForYearsATeamWon(String team) {
 		//Fill In Code
+		for (int i = 0; i < listOfWinners.length;i++)
+		{
+			if(listOfWinners[i].getTeam().equals(team))
+				System.out.println(listOfWinners[m].getYear());
+		}
 	}
 	
 	public static void main(String[] args) {
