@@ -43,11 +43,11 @@ public class MainClass {
 		{
 			for (int j = i+1; j<listOfWinners.length; j++)
 			{
-				if(listOfWinners[i].team.compareTo(listOfWinners[j].team)>0)
+				if(listOfWinners[i].getTeam().compareTo(listOfWinners[j].getTeam())>0)
 				{
-					String temp = listOfWinners[i].team;
-					listOfWinners[i].team = listOfWinners[j].team;
-					listOfWinners[j].team = temp;
+					String temp = listOfWinners[i].getTeam();
+					listOfWinners[i].getTeam() = listOfWinners[j].getTeam();
+					listOfWinners[j].getTeam() = temp;
 				}
 			}
 		}
