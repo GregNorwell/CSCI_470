@@ -11,21 +11,19 @@ public static boolean test(int[][] input) {
       }
       if(rowcoltotal == -1) //set inital total to match if this is the first sum
         rowcoltotal = sum;
-      if(rowcoltotal != sum)
+      if(rowcoltotal != sum) //check if this sum is the same as the others
         return false;
     }
     sum = 0;
-    System.out.println("rows checked");
     //check columns (up/down)
     for(int i = 0; i < 4; i++){
       sum = 0;
       for(int j = 0; j < 4; j++){
         sum += input[j][i];
       }
-      if(rowcoltotal != sum)
+      if(rowcoltotal != sum) //check if this sum is the same as the others
           return false;
     }
-    System.out.println("cols checked");
 
     //check diagonals (corner to corner)
     if((input[0][0] + input[1][1] + input[2][2] + input[3][3]) != rowcoltotal)
@@ -33,6 +31,7 @@ public static boolean test(int[][] input) {
     if((input[0][3] + input[1][2] + input[2][1] + input[3][0]) != rowcoltotal)
       return false;
 
+    //all tests passed, return true
     return true;
   }
   
