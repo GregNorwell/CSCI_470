@@ -82,6 +82,7 @@ public class MainClass {
 			if(listOfWinners[i].getYear() == year)
 				System.out.println(listOfWinners[m].getTeam());
 		}
+	}
 	
 	public static void searchForYearsATeamWon(String team) {
 		//Fill In Code
