@@ -80,7 +80,7 @@ public class MainClass {
 		for (int i = 0; i < listOfWinners.length;i++)
 		{
 			if(listOfWinners[i].getYear() == year)
-				System.out.println(listOfWinners[m].getTeam());
+				System.out.println(listOfWinners[i].getTeam());
 		}
 	}
 	
@@ -89,7 +89,7 @@ public class MainClass {
 		for (int i = 0; i < listOfWinners.length;i++)
 		{
 			if(listOfWinners[i].getTeam().equals(team))
-				System.out.println(listOfWinners[m].getYear());
+				System.out.println(listOfWinners[i].getYear());
 		}
 	}
 	
