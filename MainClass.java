@@ -45,9 +45,9 @@ public class MainClass {
 			{
 				if(listOfWinners[i].getTeam().compareTo(listOfWinners[j].getTeam())>0)
 				{
-					String temp = listOfWinners[i].getTeam();
-					listOfWinners[i].getTeam() = listOfWinners[j].getTeam();
-					listOfWinners[j].getTeam() = temp;
+					Winner temp = listOfWinners[i];
+					listOfWinners[i] = listOfWinners[j];
+					listOfWinners[j] = temp;
 				}
 			}
 		}
