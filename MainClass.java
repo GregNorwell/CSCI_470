@@ -37,7 +37,7 @@ public class MainClass {
 	}
 	
 	public static void sortByTeamName() {
-		//Fill In Code
+		//nested loop one ahead of the other to put TeamNames in order
 		for (int i=0; i < listOfWinners.length - 1; i++)
 		{
 			for (int j = i+1; j<listOfWinners.length; j++)
@@ -53,7 +53,7 @@ public class MainClass {
 	}
 	
 	public static void sortByYear() {
-		//Fill In Code
+		//nested loop one ahead of the other to put years in order
 		for (int i=0; i < listOfWinners.length - 1; i++)
 		{
 			for (int j = i+1; j<listOfWinners.length; j++)
@@ -76,7 +76,7 @@ public class MainClass {
 	}
 	
 	public static void searchForWinnerByYear(int year) {
-		//Fill In Code
+		//loop through listOfWinner until finding year
 		for (int i = 0; i < listOfWinners.length;i++)
 		{
 			if(listOfWinners[i].getYear() == year)
@@ -85,7 +85,7 @@ public class MainClass {
 	}
 	
 	public static void searchForYearsATeamWon(String team) {
-		//Fill In Code
+		//loop through listOfWinners until fiding team
 		for (int i = 0; i < listOfWinners.length;i++)
 		{
 			if(listOfWinners[i].getTeam().equals(team))
