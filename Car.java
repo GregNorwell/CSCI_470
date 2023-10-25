@@ -1,3 +1,4 @@
+import java.util.Calendar;
 import java.util.GregorianCalendar;
 public class Car
 {
@@ -44,7 +45,7 @@ public class Car
       return false;
     if(mpg <= 25.0)
       return false;
-    if((gcal.get(calendar.YEAR) - 15) >= year)
+    if((gcal.get(Calendar.YEAR) - 15) >= year)
       return false;
     return true;
   }
