@@ -1,4 +1,4 @@
-java.util.GregorianCalendar
+//java.util.GregorianCalendar
 public class Car
 {
   private String modelName;
@@ -39,13 +39,13 @@ public class Car
   }
   public boolean isPractical()
   {
-    GregorianCalendar gcal = new GregorianCalendar();
+    //GregorianCalendar gcal = new GregorianCalendar();
     if(brand.equals("NA"))
       return false;
     if(mpg <= 25.0)
       return false;
-    if((gcal.get(calendar.YEAR) - 15) >= year)
-      return false;
+    //if((gcal.get(calendar.YEAR) - 15) >= year)
+    //  return false;
     return true;
   }
 }
