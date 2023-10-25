@@ -1,7 +1,7 @@
-//import java.util.GregorianCalendar;
+import java.util.GregorianCalendar;
 public class Car
 {
-  //GregorianCalendar gcal = new GregorianCalendar();
+  GregorianCalendar gcal = new GregorianCalendar();
   private String modelName;
   private String brand;
   private int year;
@@ -44,8 +44,8 @@ public class Car
       return false;
     if(mpg <= 25.0)
       return false;
-    //if((gcal.get(calendar.YEAR) - 15) >= year)
-    //  return false;
+    if((gcal.get(calendar.YEAR) - 15) >= year)
+      return false;
     return true;
   }
 }
