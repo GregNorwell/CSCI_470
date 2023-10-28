@@ -4,7 +4,7 @@ public class RunningTotal {
   private int sum = 0;
   private int largestNumber = 0;
   private int totalNumbersEntered = 0;
-  Scanner scan = new Scanner(system.in);
+  Scanner scan = new Scanner(System.in);
 
 //This method will use a while loop to continuously ask the user for positive numbers
   public void getNumbersFromUser()
@@ -13,9 +13,9 @@ public class RunningTotal {
     {
       System.out.println("Please enter a positive number: (0 to finish)");
       int input = scan.nextInt();
-      if (input == 0)
+      if (input == 0) //break the loop if user enters 0
         break;
-      if (input > 0)
+      if (input > 0) //only apply if number is not negative or 0
       {
         sum = sum + input;
         product = product * input;
