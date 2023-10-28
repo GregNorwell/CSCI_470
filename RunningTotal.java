@@ -9,10 +9,12 @@ public class RunningTotal {
 //This method will use a while loop to continuously ask the user for positive numbers
   public void getNumbersFromUser()
   {
-    while()
+    while(true)
     {
-      System.out.println("Please enter a positive number:");
+      System.out.println("Please enter a positive number: (0 to finish)");
       int input = scan.nextInt();
+      if (input == 0)
+        break;
       if (input > 0)
       {
         sum = sum + input;
