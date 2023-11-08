@@ -1,8 +1,8 @@
 public class Item {
-  String name;
-  int quantity;
-  double price;
-  String upc;
+  private String name;
+  private int quantity;
+  private double price;
+  private String upc;
 
   Item() {
     
