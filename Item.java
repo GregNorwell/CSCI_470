@@ -4,11 +4,14 @@ public class Item {
   private double price;
   private String upc;
 
-  Item() {
+  private Item() {
     
   }
   Item(String name, int qty, double price, String upc) {
-    
+    this.name = name;
+    quantity = qty;
+    this.price = price;
+    this.upc = upc;
   }
 
   public String getName() {
