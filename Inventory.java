@@ -1,5 +1,5 @@
 public class Inventory {
-  private Item itemArray[100];
+  private Item itemArray[];
   private int totalItems = 0;
 
   public int getTotalNumberOfItems() {
