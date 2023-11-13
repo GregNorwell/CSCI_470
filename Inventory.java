@@ -25,7 +25,6 @@ public class Inventory {
     return;
   }
   public void saveInventoryToFile(String fileName) {
-    PrintWriter pw = null;
     try {
       pw = new PrintWriter(fileName);
     } catch (FileNotFoundException e) {
