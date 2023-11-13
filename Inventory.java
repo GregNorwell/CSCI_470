@@ -19,6 +19,7 @@ public class Inventory {
     }
     else {
       itemArray[totalItems] = newItem;
+      System.out.println(itemArray[totalItems].getName() + " : " + itemArray[totalItems].getQuantity() + " : " + itemArray[totalItems].getPrice() + " : " + itemArray[totalItems].getUPC());
       totalItems++;
     }
     return;
