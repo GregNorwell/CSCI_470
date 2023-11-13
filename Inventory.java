@@ -2,6 +2,7 @@ import java.io.PrintWriter;
 
 public class Inventory {
   private Item itemArray[];
+  itemArray = new Item[100];
   private int totalItems = 0;
 
   public int getTotalNumberOfItems() {
