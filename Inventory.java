@@ -32,7 +32,7 @@ public class Inventory {
     }
     for (int i = 0; i < totalItems; i++)
     {
-      System.out.println(itemArray[i].getName() + " : " + itemArray[i].getQuantity() + " : " + itemArray[i].getPrice() + " : " + itemArray[i].getUPC());
+      pw.write(itemArray[i].getName() + " : " + itemArray[i].getQuantity() + " : " + itemArray[i].getPrice() + " : " + itemArray[i].getUPC());
     }
   }
   public void loadInventoryFromFile(String fileName) {
