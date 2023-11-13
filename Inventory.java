@@ -29,6 +29,7 @@ public class Inventory {
     try {
       pw = new PrintWriter(fileName);
     } catch (FileNotFoundException e) {
+      System.out.println("File Not Found");
       e.printStackTrace();
     }
     for (int i = 0; i < totalItems; i++)
