@@ -27,12 +27,12 @@ public class Inventory {
   public void saveInventoryToFile(String fileName) {
     try {
       PrintWriter pwr = new PrintWriter(fileName);
+      for (int i = 0; i < totalItems; i++)
+      {
+        pwr.write(itemArray[i].getName() + " : " + itemArray[i].getQuantity() + " : " + itemArray[i].getPrice() + " : " + itemArray[i].getUPC());
+      }
     } catch (FileNotFoundException e) {
       e.printStackTrace();
-    }
-    for (int i = 0; i < totalItems; i++)
-    {
-      pwr.write(itemArray[i].getName() + " : " + itemArray[i].getQuantity() + " : " + itemArray[i].getPrice() + " : " + itemArray[i].getUPC());
     }
   }
   public void loadInventoryFromFile(String fileName) {
