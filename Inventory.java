@@ -1,3 +1,4 @@
+import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 
 public class Inventory {
@@ -23,6 +24,16 @@ public class Inventory {
     return;
   }
   public void saveInventoryToFile(String fileName) {
+    PrintWriter pw = null;
+    try {
+      pw = new PrintWriter(fileName);
+    } catch (FileNotFoundException e) {
+      e.printStackTrace();
+    }
+    for (int i = 0; i < totalItems; i++)
+    {
+      pw.println(itemArray[i].getName() + " " + itemArray[i].getQuantity() + " " + itemArray[i].getPrice() + " " + itemArray[i].getUPC());
+    }
   }
   public void loadInventoryFromFile(String fileName) {
   }
