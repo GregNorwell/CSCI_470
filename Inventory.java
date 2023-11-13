@@ -1,7 +1,7 @@
 import java.io.PrintWriter;
 
 public class Inventory {
-  private Item itemArray[];
+  private Item itemArray[100];
   private int totalItems = 0;
 
   public int getTotalNumberOfItems() {
