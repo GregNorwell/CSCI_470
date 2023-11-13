@@ -4,6 +4,5 @@ public class InventoryTrackerInterface {
     Item itemy = new Item("crap", 1, 19.99, "qrd");
     System.out.println(inven.getTotalNumberOfItems());
     inven.addItem(itemy);
-    return 0;
   }
 }
