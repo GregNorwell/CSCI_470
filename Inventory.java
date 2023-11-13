@@ -30,7 +30,7 @@ public class Inventory {
     } catch (FileNotFoundException e) {
       e.printStackTrace();
     }
-    for (int i = 0; i <= totalItems; i++)
+    for (int i = 0; i < totalItems; i++)
     {
       pw.println(itemArray[i].getName() + " " + itemArray[i].getQuantity() + " " + itemArray[i].getPrice() + " " + itemArray[i].getUPC());
     }
