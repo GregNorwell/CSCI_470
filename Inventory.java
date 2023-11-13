@@ -17,7 +17,7 @@ public class Inventory {
       System.out.println("Item not added.");
     }
     else {
-      itemArray[totalItems] = newItem;
+      itemArray[totalItems] = newItem(newItem);
       totalItems++;
     }
     return;
