@@ -29,12 +29,11 @@ public class Inventory {
     try {
       pw = new PrintWriter(fileName);
     } catch (FileNotFoundException e) {
-      System.out.println("File Not Found");
       e.printStackTrace();
     }
     for (int i = 0; i < totalItems; i++)
     {
-      pw.println(itemArray[i].getName() + " : " + itemArray[i].getQuantity() + " : " + itemArray[i].getPrice() + " : " + itemArray[i].getUPC());
+      pw.write(itemArray[i].getName() + " : " + itemArray[i].getQuantity() + " : " + itemArray[i].getPrice() + " : " + itemArray[i].getUPC());
     }
   }
   public void loadInventoryFromFile(String fileName) {
