@@ -37,5 +37,17 @@ public class Inventory {
     }
   }
   public void loadInventoryFromFile(String fileName) {
+    try {
+      File fil = new File(fileName);
+      Scanner inputFile = new Scanner(fil);
+
+      while (inputFile.hasNext()) {
+        String str = inputFile.nextLine();
+      }
+      
+      inputFile.close();
+    } catch (FileNotFoundException e) {
+      e.printStackTrace();
+    }
   }
 }
