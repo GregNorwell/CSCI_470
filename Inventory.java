@@ -31,10 +31,10 @@ public class Inventory {
       {
         pwr.println(itemArray[i].getName() + " : " + itemArray[i].getQuantity() + " : " + itemArray[i].getPrice() + " : " + itemArray[i].getUPC());
       }
+      pwr.close();
     } catch (FileNotFoundException e) {
       e.printStackTrace();
     }
-    pwr.close();
   }
   public void loadInventoryFromFile(String fileName) {
   }
