@@ -30,36 +30,36 @@ public class Inventory {
     }
     return;
   }
-  
+
+  //saves current inventory to fileName variabes divided by :
   public void saveInventoryToFile(String fileName) {
     try {
       PrintWriter pwr = new PrintWriter(fileName);
       for (int i = 0; i < totalItems; i++)
       {
-        pwr.println(itemArray[i].getName() + " " + itemArray[i].getQuantity() + " " + itemArray[i].getPrice() + " " + itemArray[i].getUPC());
+        pwr.println(itemArray[i].getName() + ":" + itemArray[i].getQuantity() + ":" + itemArray[i].getPrice() + ":" + itemArray[i].getUPC());
       }
       pwr.close();
     } catch (FileNotFoundException e) {
       e.printStackTrace();
     }
   }
-  
+
+  //loads Item inventory separated by colon(:)
   public void loadInventoryFromFile(String fileName) {
     try {
       File fil = new File(fileName);
       Scanner inputFile = new Scanner(fil);
 
-      while (inputFile.hasNext()) {
+      while (inputFile.hasNext()) { //continue until end of file
         String str = inputFile.nextLine();
-        String[] splited = str.split(" ");
+        //split string into array divided by :
+        String[] splited = str.split(":");
+        //use new split array and add item into inven
         Item toAdd = new Item(splited[0], Integer.parseInt(splited[1]), Double.parseDouble(splited[2]), splited[3]);
         addItem(toAdd);
       } 
-      for (int i = 0; i < totalItems; i++)
-      {
-        System.out.println(itemArray[i].getName() + " " + itemArray[i].getQuantity() + " " + itemArray[i].getPrice() + " " + itemArray[i].getUPC());
-      }
-      inputFile.close();
+      inputFile.close(); //close the file
     } catch (FileNotFoundException e) {
       e.printStackTrace();
     }
