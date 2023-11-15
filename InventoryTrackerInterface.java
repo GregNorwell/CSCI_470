@@ -43,8 +43,8 @@ public class InventoryTrackerInterface {
           break;
         default:
           System.out.println("Invalid choice input");
-      } while (choice != 5);
-    }
+      }
+    } while (choice != 5);
 
   }
 }
