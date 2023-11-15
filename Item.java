@@ -1,8 +1,8 @@
 public class Item {
-  private String name;
-  private int quantity;
-  private double price;
-  private String upc;
+  private String name; //name of product
+  private int quantity; //number of products
+  private double price; //price of product
+  private String upc; //code of product
 
   //empty constructor (inaccessable)
   private Item() {
