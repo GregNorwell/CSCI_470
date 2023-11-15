@@ -12,8 +12,8 @@ public class InventoryTrackerInterface {
       System.out.println("4. Load Inventory from file");
       System.out.println("5. Exit");
       choice = sc.nextInt();
-      sc.nextLine();
-      switch(choice) {
+      sc.nextLine(); //skipping lines so that nextLine functions
+      switch(choice) { //switch statement for choice int result from user
         case 1:
           System.out.println("Enter the new items name:");
           String name = sc.nextLine();
@@ -25,11 +25,11 @@ public class InventoryTrackerInterface {
           sc.nextLine();
           System.out.println("Enter the new items upc:");
           String upc = sc.nextLine();
-          Item itemy = new Item(name, quantity, price, upc);
-          inven.addItem(itemy);
+          Item itemy = new Item(name, quantity, price, upc); // create new Item using the given attributes
+          inven.addItem(itemy);// add the item to the current inventory
           break;
         case 2:
-          System.out.println("Which item would you like info for? [0-" + inven.getTotalNumberOfItems() + "]");
+          System.out.println("Which item would you like info for? [0-" + inven.getTotalNumberOfItems() - 1 + "]");
           int choice2 = sc.nextInt();
           System.out.println("Name:      " + inven.getItem(choice2).getName());
           System.out.println("Quantity:  " + inven.getItem(choice2).getQuantity());
