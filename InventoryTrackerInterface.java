@@ -7,5 +7,6 @@ public class InventoryTrackerInterface {
     System.out.println(inven.getTotalNumberOfItems());
     inven.saveInventoryToFile("test.txt");
     inven.loadInventoryFromFile("test.txt");
+
   }
 }
