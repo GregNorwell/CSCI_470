@@ -4,25 +4,28 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Inventory {
-  private Item itemArray[] = new Item[100];
-  private int totalItems = 0;
+  private Item itemArray[] = new Item[100]; //Array of items capped at 100
+  private int totalItems = 0; //head index of itemArray[]
 
+  //returns totalItems
   public int getTotalNumberOfItems() {
     return totalItems;
   }
+
+  //returns the item at given index in itemArray[]
   public Item getItem(int index) {
     if (index < 0 || index > totalItems)
       return null;
     return itemArray[index];
   }
-  
+
+  //adds a new item to itemArray into the current inventory
   public void addItem(Item newItem) {
     if (newItem == null){
       System.out.println("Item not added.");
     }
     else {
       itemArray[totalItems] = newItem;
-      System.out.println(itemArray[totalItems].getName() + " " + itemArray[totalItems].getQuantity() + " " + itemArray[totalItems].getPrice() + " " + itemArray[totalItems].getUPC());
       totalItems++;
     }
     return;
