@@ -49,7 +49,7 @@ public class Inventory {
       while (inputFile.hasNext()) {
         String str = inputFile.nextLine();
         String[] splited = str.split(" ");
-        Item toAdd = new Item(splited[0], splited[1], splited[2], splited[3]);
+        Item toAdd = new Item(splited[0], Integer.parseInt(splited[1]), Double.parseDouble(splited[2]), splited[3]);
         addItem(toAdd);
         System.out.println(itemArray[totalItems].getName() + " " + itemArray[totalItems].getQuantity() + " " + itemArray[totalItems].getPrice() + " " + itemArray[totalItems].getUPC());
       } 
