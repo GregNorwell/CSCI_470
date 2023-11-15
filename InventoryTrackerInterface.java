@@ -11,15 +11,15 @@ public class InventoryTrackerInterface {
       System.out.println("3. Save Inventory to file");
       System.out.println("4. Load Inventory from file");
       System.out.println("5. Exit");
-      choice = sc.nextLine();
+      choice = sc.nextInt();
       switch(choice) {
         case 1:
           System.out.println("Enter the new items name:");
           String name = sc.nextLine();
           System.out.println("Enter the new items quantity:");
-          int quantity = sc.nextLine();
+          int quantity = sc.nextInt();
           System.out.println("Enter the new items price:");
-          double price = sc.nextLine();
+          double price = sc.nextdouble();
           System.out.println("Enter the new items upc:");
           String upc = sc.nextLine();
           Item itemy = new Item(name, quantity, price, upc);
@@ -27,7 +27,7 @@ public class InventoryTrackerInterface {
           break;
         case 2:
           System.out.println("Which item would you like info for? [0-" + inven.getTotalNumberOfItems() + "]");
-          int choice2 = sc.nextLine();
+          int choice2 = sc.nextInt();
           System.out.println("Name:      " + inven.getItem(choice2).getName());
           System.out.println("Quantity:  " + inven.getItem(choice2).getQuantity());
           System.out.println("Price:     " + inven.getItem(choice2).getPrice());
