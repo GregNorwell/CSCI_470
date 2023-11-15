@@ -12,14 +12,17 @@ public class InventoryTrackerInterface {
       System.out.println("4. Load Inventory from file");
       System.out.println("5. Exit");
       choice = sc.nextInt();
+      sc.nextLine();
       switch(choice) {
         case 1:
           System.out.println("Enter the new items name:");
           String name = sc.nextLine();
           System.out.println("Enter the new items quantity:");
           int quantity = sc.nextInt();
+          sc.nextLine();
           System.out.println("Enter the new items price:");
           double price = sc.nextDouble();
+          sc.nextLine();
           System.out.println("Enter the new items upc:");
           String upc = sc.nextLine();
           Item itemy = new Item(name, quantity, price, upc);
