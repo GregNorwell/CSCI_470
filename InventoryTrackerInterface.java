@@ -2,6 +2,9 @@ import java.util.Scanner;  // Import the Scanner class
 
 public class InventoryTrackerInterface {
   public static void main(String[] args) {
+
+    String filename = "test.txt"; //filename for loading and unloading inventory
+    
     Scanner sc = new Scanner(System.in);
     Inventory inven = new Inventory();
     int choice;
@@ -37,11 +40,11 @@ public class InventoryTrackerInterface {
           System.out.println("UPC:       " + inven.getItem(choice2).getUPC());
           break;
         case 3:
-          inven.saveInventoryToFile("test.txt");
+          inven.saveInventoryToFile(filename);
           System.out.println("Inventory Saved!");
           break;
         case 4:
-          inven.loadInventoryFromFile("test.txt");
+          inven.loadInventoryFromFile(filename);
           System.out.println("Inventory Loaded!");
           break;
         case 5:
