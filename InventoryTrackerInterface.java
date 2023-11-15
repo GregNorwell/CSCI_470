@@ -2,7 +2,7 @@ public class InventoryTrackerInterface {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     Inventory inven = new Inventory();
-    while () {
+    do {
       System.out.println("1. Add an item to the inventory");
       System.out.println("2. Get an items info");
       System.out.println("3. Save Inventory to file");
@@ -11,7 +11,7 @@ public class InventoryTrackerInterface {
       int choice = sc.nextLine();
       switch(choice) {
         case 1:
-          System.out.println("Enter the new items name:")
+          System.out.println("Enter the new items name:");
           String name = sc.nextLine();
           System.out.println("Enter the new items quantity:");
           int quantity = sc.nextLine();
@@ -32,19 +32,18 @@ public class InventoryTrackerInterface {
           break;
         case 3:
           inven.saveInventoryToFile("test.txt");
-          System.out.println("Inventory Saved!")
+          System.out.println("Inventory Saved!");
           break;
         case 4:
           inven.loadInventoryFromFile("test.txt");
-          System.out.println("Inventory Loaded!")
+          System.out.println("Inventory Loaded!");
           break;
         case 5:
           System.out.println("Goodbye!");
-          return;
           break;
         default:
           System.out.println("Invalid choice input");
-      }
+      } while (choice != 5);
     }
 
   }
