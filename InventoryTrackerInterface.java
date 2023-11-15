@@ -19,7 +19,7 @@ public class InventoryTrackerInterface {
           System.out.println("Enter the new items quantity:");
           int quantity = sc.nextInt();
           System.out.println("Enter the new items price:");
-          double price = sc.nextdouble();
+          double price = sc.nextDouble();
           System.out.println("Enter the new items upc:");
           String upc = sc.nextLine();
           Item itemy = new Item(name, quantity, price, upc);
