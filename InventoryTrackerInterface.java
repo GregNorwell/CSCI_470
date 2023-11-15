@@ -31,7 +31,7 @@ public class InventoryTrackerInterface {
           System.out.println("UPC:       " + inven.getItem(choice2).getUPC());
           break;
         case 3:
-          inven.saveInventoryToFile("testout.txt");
+          inven.saveInventoryToFile("test.txt");
           System.out.println("Inventory Saved!")
           break;
         case 4:
