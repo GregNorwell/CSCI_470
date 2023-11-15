@@ -1,14 +1,17 @@
+import java.util.Scanner;  // Import the Scanner class
+
 public class InventoryTrackerInterface {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     Inventory inven = new Inventory();
+    int choice;
     do {
       System.out.println("1. Add an item to the inventory");
       System.out.println("2. Get an items info");
       System.out.println("3. Save Inventory to file");
       System.out.println("4. Load Inventory from file");
       System.out.println("5. Exit");
-      int choice = sc.nextLine();
+      choice = sc.nextLine();
       switch(choice) {
         case 1:
           System.out.println("Enter the new items name:");
