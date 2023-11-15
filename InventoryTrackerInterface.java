@@ -7,7 +7,7 @@ public class InventoryTrackerInterface {
     inven.loadInventoryFromFile("test.txt");
 
     for (int i = 0; i < inven.getTotalNumberOfItems(); i++) {
-      System.out.println(itemArray[i].getName() + " " + itemArray[i].getQuantity() + " " + itemArray[i].getPrice() + " " + itemArray[i].getUPC());
+      System.out.println(inven[i].getName() + " " + inven[i].getQuantity() + " " + inven[i].getPrice() + " " + inven[i].getUPC());
     }
 
   }
