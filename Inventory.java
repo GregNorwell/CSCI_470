@@ -51,7 +51,6 @@ public class Inventory {
         String[] splited = str.split(" ");
         Item toAdd = new Item(splited[0], Integer.parseInt(splited[1]), Double.parseDouble(splited[2]), splited[3]);
         addItem(toAdd);
-        System.out.println(itemArray[totalItems].getName() + " " + itemArray[totalItems].getQuantity() + " " + itemArray[totalItems].getPrice() + " " + itemArray[totalItems].getUPC());
       } 
       inputFile.close();
     } catch (FileNotFoundException e) {
