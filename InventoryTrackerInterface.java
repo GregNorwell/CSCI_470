@@ -29,7 +29,7 @@ public class InventoryTrackerInterface {
           inven.addItem(itemy);// add the item to the current inventory
           break;
         case 2:
-          System.out.println("Which item would you like info for? [0-" + inven.getTotalNumberOfItems() - 1 + "]");
+          System.out.println("Which item would you like info for? [0-" + (inven.getTotalNumberOfItems() - 1) + "]");
           int choice2 = sc.nextInt();
           System.out.println("Name:      " + inven.getItem(choice2).getName());
           System.out.println("Quantity:  " + inven.getItem(choice2).getQuantity());
