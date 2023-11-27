@@ -13,6 +13,10 @@ public class MileRedeemer {
     while (fileScanner.hasNext()) {
       String str = fileScanner.nextLine();
       String[] splited = str.split(";|-");
+      
+      //Create splited variables here
+      //Replace variables as parameters in MileTicket instance below
+      
       MileTicket toAdd = new MileTicket(splited[0], Integer.parseInt(splited[1]), Integer.parseInt(splited[2]), Integer.parseInt(splited[3]), Integer.parseInt(splited[4]), Integer.parseInt(splited[5]));
       ticketArray[i] = toAdd;
       i++;
