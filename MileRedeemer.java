@@ -28,8 +28,8 @@ public class MileRedeemer {
   //desired month of departure, and des is an array of MileTicket objects. To avoid writing one 
   //huge method, you can (and probably should) have the redeem() method call some other 
   //methods to accomplish subtasks as part of the larger overall algorithm
-  public void redeem(int miles, int month, mileTicket[] des) {
-    //Double check mileTicket spelling
+  public void redeem(int miles, int month, MileTicket[] des) {
+    
   }
 
   //miles is the total available miles for redeeming, 
@@ -38,7 +38,14 @@ public class MileRedeemer {
   //destination (i.e., 1 indicates an economy class ticket, and 2 indicates a first class ticket).
   //Moreover, this method will return the remaining miles after redeeming.
   public int getRemainingMiles (int miles, int month, MileTicket[] des, int[] results) {
-    
+    for (MileTicket var : des) { //roll through all MileTicket[] objects in destinations
+      for (int i = des[4]; i <= des[5]; i++) { //roll through SuperSaver months beginning to end, YEAR ROLLOVER (ex. 12-1) WILL BREAK THIS
+        if (i == month) { //if month is applicable for SuperSaver at destination
+          
+        }
+      }
+      
+    }
   }
 
   //will be responsible for printing out the ticket’s
