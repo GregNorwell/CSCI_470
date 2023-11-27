@@ -29,7 +29,7 @@ public class MileRedeemer {
   //huge method, you can (and probably should) have the redeem() method call some other 
   //methods to accomplish subtasks as part of the larger overall algorithm
   public void redeem(int miles, int month, mileTicket[] des) {
-    
+    //Double check mileTicket spelling
   }
 
   //miles is the total available miles for redeeming, 
