@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class MileRedeemer {
-  private MileTicket ticketArray[] = new MileTicket[100];
+  private ArrayList<MileTicket> ticketArray = new ArrayList<MileTicket>();
   private int remainPostRedeem = 0;
   
   //use a Scanner object as the input parameter 
@@ -9,9 +9,15 @@ public class MileRedeemer {
   //the destination data into an array of MileTicket objects, which should then be sorted by their 
   //normal mileage
   public MileTicket[] readDestinations(Scanner fileScanner) {
-    String str = fileScanner.nextLine();
-    String[] splited = str.split(";|-");
-    MileTicket toAdd = new MileTicket(splited[0], Integer.parseInt(splited[1]), Integer.parseInt(splited[2]), Integer.parseInt(splited[3]), Integer.parseInt(splited[4]), Integer.parseInt(splited[5]));
+    int i = 0;
+    while (fileScanner.hasNext()) {
+      String str = fileScanner.nextLine();
+      String[] splited = str.split(";|-");
+      MileTicket toAdd = new MileTicket(splited[0], Integer.parseInt(splited[1]), Integer.parseInt(splited[2]), Integer.parseInt(splited[3]), Integer.parseInt(splited[4]), Integer.parseInt(splited[5]));
+      ticketArray[i] = toAdd;
+      i++;
+    }
+    return ticketArray[];
   }
 
   //miles is the total available miles for redeeming, month is the 
