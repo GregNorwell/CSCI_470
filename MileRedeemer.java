@@ -38,14 +38,39 @@ public class MileRedeemer {
   //destination (i.e., 1 indicates an economy class ticket, and 2 indicates a first class ticket).
   //Moreover, this method will return the remaining miles after redeeming.
   public int getRemainingMiles (int miles, int month, MileTicket[] des, int[] results) {
-    for (MileTicket var : des) { //roll through all MileTicket[] objects in destinations
-      for (int i = des[4]; i <= des[5]; i++) { //roll through SuperSaver months beginning to end, YEAR ROLLOVER (ex. 12-1) WILL BREAK THIS
-        if (i == month) { //if month is applicable for SuperSaver at destination
-          
+    ArrayList<int> temp = new ArrayList<int>(); //holds order of whether or not a economy ticket to the destination was obtained
+    for (int i = 0; i < des.length; i++) { //roll through all MileTicket[] objects in destinations ordered from farthest to closest
+      bool supSave = false;
+      for (int j = des[i].getSSMonthStart(); j <= des[i].getSSMonthEnd(); i++) { //roll through SuperSaver months beginning to end, YEAR ROLLOVER (ex. 12-1) WILL BREAK THIS
+        if (j == month) { //if month is applicable for SuperSaver at destination
+          supSave = true;
         }
       }
       
+      if ((miles - des[i].getNormalMilesReqEcon()) >= 0 || ((miles - des[i].getSuperMilesReqEcon()) >= 0 && supSave == true)) { //if the current destination (farthest to closest) is affordable
+        if (supSave == true)
+          miles = miles - des[i].getSuperMilesReqEcon();
+        else
+          miles = miles - des[i].getNormalMilesReqEcon();
+        temp.add(1); //register as economy class ticket
+      } else {
+        temp.add(0); //resgister as no ticket
+      }
     }
+
+    int y = 0; ////used to trace temp but only count up on selected destinations
+    for (int i = 0; i < temp.size(); i++) { //loop through temp which is filled with 1's and 0's of whether or not a destination was selected
+      if (temp.get(i) == 1) { //if the destination was selected
+        if ((miles - des[i].getAddMilesReqFirst()) >= 0) { //if the first class extention is affordable
+          miles = miles - des[i].getAddMilesReqFirst();
+          results[y] = 2; //two marks a first class ticket
+        } else {
+          results[y] = 1; //one marks an economy class ticket
+        }
+        y++;
+      }
+    }
+    return miles;
   }
 
   //will be responsible for printing out the ticket’s
