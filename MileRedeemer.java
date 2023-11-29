@@ -24,7 +24,7 @@ public class MileRedeemer {
     }
     MileTicket [] destinationArray = (MileTicket []) ticketArray.toArray(new MileTicket [ticketArray.size()]);
     Arrays.sort(destinationArray, TicketComparator());
-    return destinationArray;
+    return destinationArray[];
   }
 
   //miles is the total available miles for redeeming, month is the 
