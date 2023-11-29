@@ -33,7 +33,7 @@ public class MileRedeemer {
   //methods to accomplish subtasks as part of the larger overall algorithm
   public void redeem(int miles, int month, MileTicket[] des) {
     int results[] = new int[des.length];
-    getRemainingMiles(miles, month, des, )
+    getRemainingMiles(miles, month, des, results);
   }
 
   //miles is the total available miles for redeeming, 
