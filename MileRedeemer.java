@@ -79,6 +79,15 @@ public class MileRedeemer {
   //the method getRemainingMiles(), results is an int array, in which each int value
   //indicates the redeeming result for each destination
   public void printTickets(MileTicket[] sortedDes, int[] results, int remainMiles) {
-    
+    System.out.println("Your accumulated miles can be used to redeem the following tickets:");
+    for (int i = 0; i < sortedDes.length; i++){
+      if (results[i] == 1)
+        System.out.println("*A trip to " + sortedDes[i].getCity() + " economy class");
+      else
+        System.out.println("*A trip to " + sortedDes[i].getCity() + " first class");
+    }
+    System.out.println("Your remaining miles: " + remainMiles);
   }
+
+  
 }
