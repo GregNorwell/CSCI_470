@@ -8,7 +8,12 @@ public class MileTicket {
   private int SSMonthEnd;
 
   MileTicket (String city, int normalMilesReqEcon, int superMilesReqEcon, int addMilesReqFirst, int SSMonthStart, int SSMonthEnd) {
-    
+    this.city = city;
+    this.normalMilesReqEcon = normalMilesReqEcon;
+    this.superMilesReqEcon = superMilesReqEcon;
+    this.addMilesReqFirst = addMilesReqFirst;
+    this.SSMonthStart = SSMonthStart;
+    this.SSMonthEnd = SSMonthEnd;
   }
 
   String getCity(){
