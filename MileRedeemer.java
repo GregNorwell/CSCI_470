@@ -65,11 +65,10 @@ public MileTicket[] readDestinations(Scanner fileScanner) {
           miles = miles - des[i].getNormalMilesReqEcon();
         results[i] = 1; //register as economy class ticket
       } else {
-        results[i] = 2; //resgister as no ticket
+        results[i] = 0; //resgister as no ticket
       }
     }
 
-    int y = 0; ////used to trace temp but only count up on selected destinations
     for (int i = 0; i < results.length; i++) { //loop through temp which is filled with 1's and 0's of whether or not a destination was selected
       if (temp.get(i) == 1) { //if the destination was selected
         if ((miles - des[i].getAddMilesReqFirst()) >= 0) { //if the first class extention is affordable
@@ -99,7 +98,7 @@ public MileTicket[] readDestinations(Scanner fileScanner) {
 
 }
 
-class TicketComparator implements Comparator<MileTicket> { 
+class TicketComparator implements Comparator< MileTicket> { 
   public int compare(MileTicket t1, MileTicket t2) {
     return (t2.getNormalMilesReqEcon() - t1.getNormalMilesReqEcon());
   }
