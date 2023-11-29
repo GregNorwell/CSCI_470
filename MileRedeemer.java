@@ -10,22 +10,30 @@ public class MileRedeemer {
   //for flexibility and reusability. This method should use the Scanner object to read and parse 
   //the destination data into an array of MileTicket objects, which should then be sorted by their 
   //normal mileage
-  public MileTicket[] readDestinations(Scanner fileScanner) {
-    int i = 0;
-    while (fileScanner.hasNext()) {
-      String str = fileScanner.nextLine();
-      String[] splited = str.split(";|-");
-      
-      //Create splited variables here
-      //Replace variables as parameters in MileTicket instance below
-      
-      MileTicket toAdd = new MileTicket(splited[0], Integer.parseInt(splited[1]), Integer.parseInt(splited[2]), Integer.parseInt(splited[3]), Integer.parseInt(splited[4]), Integer.parseInt(splited[5]));
-      ticketArray.add(toAdd);
-    }
-    MileTicket [] destinationArray = (MileTicket []) ticketArray.toArray(new MileTicket [ticketArray.size()]);
-    Arrays.sort(destinationArray, TicketComparator());
-    return destinationArray[];
+  
+public MileTicket[] readDestinations(Scanner fileScanner) {
+  int i = 0;
+  while (fileScanner.hasNext()) {
+    String str = fileScanner.nextLine();
+    String[] splited = str.split(";|-");
+
+    //Parse up input, save in variables to be passed into the MileTicket object
+    String cityName = splited[0];
+    int normalPrice = Integer.parseInt(splited[1]);
+    int superPrice = Integer.parseInt(splited[2]);
+    int addPrice = Integer.parseInt(splited[3]);
+    int monthStart = Integer.parseInt(splited[4]);
+    int monthEnd = Integer.parseInt(splited[5]);
+  
+    MileTicket toAdd = new MileTicket(cityName, normalPrice, superPrice, addPrice, monthStart, monthEnd);
+    ticketArray.add(toAdd);
   }
+  MileTicket[] destinationArray = (MileTicket []) ticketArray.toArray(new MileTicket [ticketArray.size()]);
+
+  Arrays.sort(destinationArray, TicketComparator());
+
+  return destinationArray[];
+}
 
   //miles is the total available miles for redeeming, month is the 
   //desired month of departure, and des is an array of MileTicket objects. To avoid writing one 
