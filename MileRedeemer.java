@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class MileRedeemer {
   private ArrayList<MileTicket> ticketArray = new ArrayList<MileTicket>();
@@ -18,10 +20,11 @@ public class MileRedeemer {
       //Replace variables as parameters in MileTicket instance below
       
       MileTicket toAdd = new MileTicket(splited[0], Integer.parseInt(splited[1]), Integer.parseInt(splited[2]), Integer.parseInt(splited[3]), Integer.parseInt(splited[4]), Integer.parseInt(splited[5]));
-      ticketArray[i] = toAdd;
-      i++;
+      ticketArray.add(toAdd);
     }
-    return ticketArray[];
+    MileTicket [] destinationArray = (MileTicket []) ticketArray.toArray(new MileTicket [ticketArray.size()]);
+    Arrays.sort(destinationArray, TicketComparator());
+    return destinationArray;
   }
 
   //miles is the total available miles for redeeming, month is the 
@@ -89,5 +92,10 @@ public class MileRedeemer {
     System.out.println("Your remaining miles: " + remainMiles);
   }
 
-  
+}
+
+class TicketComparator implements Comparator<MileTicket> { 
+  public int compare(MileTicket t1, MileTicket t2) {
+    return (t2.getNormalMilesReqEcon() - t1.getNormalMilesReqEcon());
+  }
 }
