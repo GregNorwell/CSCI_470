@@ -28,7 +28,7 @@ public MileTicket[] readDestinations(Scanner fileScanner) {
   }
   MileTicket[] destinationArray = (MileTicket []) ticketArray.toArray(new MileTicket [ticketArray.size()]);
 
-  Arrays.sort(destinationArray, TicketComparator());
+  Arrays.sort(destinationArray, new TicketComparator());
 
   return destinationArray;
 }
@@ -49,7 +49,7 @@ public MileTicket[] readDestinations(Scanner fileScanner) {
   //Moreover, this method will return the remaining miles after redeeming.
   public int getRemainingMiles (int miles, int month, MileTicket[] des, int[] results) {
     for (int i = 0; i < des.length; i++) { //roll through all MileTicket[] objects in destinations ordered from farthest to closest
-      bool supSave = false;
+      boolean supSave = false;
       for (int j = des[i].getSSMonthStart(); j <= des[i].getSSMonthEnd(); i++) { //roll through SuperSaver months beginning to end, YEAR ROLLOVER (ex. 12-1) WILL BREAK THIS
         if (j == month) { //if month is applicable for SuperSaver at destination
           supSave = true;
@@ -67,8 +67,8 @@ public MileTicket[] readDestinations(Scanner fileScanner) {
       }
     }
 
-    for (int i = 0; i < results.length; i++) { //loop through temp which is filled with 1's and 0's of whether or not a destination was selected
-      if (temp.get(i) == 1) { //if the destination was selected
+    for (int i = 0; i < results.length; i++) { //loop through results which is filled with 1's and 0's of whether or not a destination was selected
+      if (results[i] == 1) { //if the destination was selected
         if ((miles - des[i].getAddMilesReqFirst()) >= 0) { //if the first class extention is affordable
           miles = miles - des[i].getAddMilesReqFirst();
           results[i] = 2; //two marks a first class ticket
