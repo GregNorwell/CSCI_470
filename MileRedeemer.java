@@ -1,6 +1,4 @@
-import java.util.Scanner;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 
 public class MileRedeemer {
   private ArrayList<MileTicket> ticketArray = new ArrayList<MileTicket>();
@@ -32,7 +30,7 @@ public MileTicket[] readDestinations(Scanner fileScanner) {
 
   Arrays.sort(destinationArray, TicketComparator());
 
-  return destinationArray[];
+  return destinationArray;
 }
 
   //miles is the total available miles for redeeming, month is the 
