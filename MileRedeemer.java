@@ -51,7 +51,7 @@ public MileTicket[] readDestinations(Scanner fileScanner) {
   public int getRemainingMiles (int miles, int month, MileTicket[] des, int[] results) {
     for (int i = 0; i < des.length; i++) { //roll through all MileTicket[] objects in destinations ordered from farthest to closest
       boolean supSave = false;
-      for (int j = des[i].getSSMonthStart(); j <= des[i].getSSMonthEnd(); i++) { //roll through SuperSaver months beginning to end, YEAR ROLLOVER (ex. 12-1) WILL BREAK THIS
+      for (int j = des[i].getSSMonthStart(); j <= des[i].getSSMonthEnd(); j++) { //roll through SuperSaver months beginning to end, YEAR ROLLOVER (ex. 12-1) WILL BREAK THIS
         if (j == month) { //if month is applicable for SuperSaver at destination
           supSave = true;
         }
