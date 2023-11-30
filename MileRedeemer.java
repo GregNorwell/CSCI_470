@@ -39,7 +39,8 @@ public MileTicket[] readDestinations(Scanner fileScanner) {
   //methods to accomplish subtasks as part of the larger overall algorithm
   public void redeem(int miles, int month, MileTicket[] des) {
     int results[] = new int[des.length];
-    getRemainingMiles(miles, month, des, results);
+    int mileRemain = getRemainingMiles(miles, month, des, results);
+    printTickets(des, results, mileRemain);
   }
 
   //miles is the total available miles for redeeming, 
