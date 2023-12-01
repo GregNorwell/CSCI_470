@@ -23,7 +23,6 @@ public class MainClass {
     
     //Open file specified
     File file = new File(args[0]);
-    errorCont:
     //Driver function, will run at least once, it will continue to as long as input is 'y'
     do {
     try {
