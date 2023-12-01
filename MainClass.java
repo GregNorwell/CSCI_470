@@ -16,9 +16,11 @@ public class MainClass {
     //Check to prevent user from inputting invalid value
     if(args.length != 1) {
       System.out.println("Command line arg filename error");
+      //Close scanner
+      cons.close();
       return;
     }
-
+    
     //Open file specified
     File file = new File(args[0]);
     errorCont:
@@ -59,6 +61,7 @@ public class MainClass {
       cont = cons.next().charAt(0);  
       }
     } while(cont == 'y');
-    
+    //Close scanner
+    cons.close();
   }
 }
