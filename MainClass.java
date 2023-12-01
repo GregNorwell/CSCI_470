@@ -38,18 +38,21 @@ public class MainClass {
       System.out.println("List of destination cities you can travel to:");
 
       //UI to ask for user input, loop through the destinations available
-      for (int i = 0; i < dests.length; i++)
+      for (int i = 0; i < dests.length; i++){
         //Print out cities + formatting
         System.out.println(dests[i].getCity());
-        System.out.println("------------------------------------");
-        System.out.println("Please input your total accumulated miles:");
-        int totalMiles = cons.nextInt();
-        System.out.println("Please input your month of departure (1-12):");
-        int deptMonth = cons.nextInt();
+      }
+      
+      //Continue with formatting and messages for user
+      System.out.println("------------------------------------");
+      System.out.println("Please input your total accumulated miles:");
+      int totalMiles = cons.nextInt();
+      System.out.println("Please input your month of departure (1-12):");
+      int deptMonth = cons.nextInt();
 
-        //Insert data into redeem function
-        redeem.redeem(totalMiles, deptMonth, dests);
-        System.out.println("");
+      //Insert data into redeem function
+      redeem.redeem(totalMiles, deptMonth, dests);
+      System.out.println("");
 
       //Error catching and exception handling
       } catch (FileNotFoundException e) {
